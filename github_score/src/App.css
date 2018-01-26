@@ -1,28 +1,60 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+.appBox {
+  height:180px;
+  width: 80vw;
+  border: 2px solid black;
+  margin-top: 50px;
   padding: 20px;
-  color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
-.App-intro {
-  font-size: large;
+.leftSide {
+  width: 50%;
+  height: 100%;
+  float: left;
+  ;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.rightSide {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.header {
+  font-size: 36px;
+  height: 40%
+}
+
+.userInputLabel {
+  font-size: 18px;
+  float: left;
+  padding-right: 5px;
+}
+
+.userInput {
+  height: 18px;
+  width: 200px;
+  font-size: 12px;
+  float: left;
+}
+
+.inputContainer {
+  height: 30%;
+  width: 100%;
+}
+
+.buttonContainer {
+  height: 30%;
+  width: 100%;
+}
+
+.calculateScoreButton {
+  width: 360px;
+  height: 30px;
 }

@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="app">
+        <div className="appBox">
+          <div className="leftSide">
+            <div className="header">
+              GitHub Score
+            </div>
+            <div className="inputContainer">
+              <div className="userInputLabel">
+                GitHub Username:
+              </div>
+              <input type='text' className="userInput" placeholder="Enter a GitHub Username" >
+              </input>
+            </div>
+            <div className="buttonContainer">
+              <button className="calculateScoreButton">
+                Calculate my GitHub Score
+              </button>
+            </div>
+          </div>
+          <div className="rightSide">
+          </div>
+        </div>
       </div>
     );
   }
