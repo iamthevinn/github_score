@@ -13,6 +13,7 @@ class App extends Component {
     }
     this.handleUserNameChange = this.handleUserNameChange.bind(this);
     this.getGitHubScore = this.getGitHubScore.bind(this);
+    this.getScoreComment = this.getScoreComment.bind(this);
   }
 
   handleUserNameChange(event) {
@@ -33,6 +34,23 @@ class App extends Component {
     )
   }
 
+  getScoreComment() {
+    const {returnedScore} = this.state
+
+    if (returnedScore >= 200 )
+      return {comment: "Github Elite!", color: 'blue'}
+    if (returnedScore >= 100 )
+      return {comment: "Great job!", color: 'green'}
+    if (returnedScore >= 50 )
+      return {comment: "Doing good!", color: 'black'}
+    if (returnedScore >= 20 )
+      return {comment: "A decent start!", color: 'orange'}
+    if (returnedScore > 0 )
+      return {comment: "Needs work!", color: 'red'}
+    
+    return {comment: "You really should just give up!", color: 'purple'}
+  }
+
   render() {
     let scoreDisplay = <div className="scoreDisplay"></div>
     let scoreComment = <div className="scoreComment"></div>
@@ -41,7 +59,7 @@ class App extends Component {
         scoreDisplay = <div className="scoreDisplay">Not Found</div>
       } else {
         scoreDisplay = <div className="scoreDisplay">Your Score: {this.state.returnedScore}</div>
-        scoreComment = <div className="scoreComment">Great Job!</div>
+        scoreComment = <div style={{color: this.getScoreComment().color}} className="scoreComment">{this.getScoreComment().comment}</div>
       }
     }
 
