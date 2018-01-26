@@ -25,6 +25,12 @@ class App extends Component {
             </div>
           </div>
           <div className="rightSide">
+            <div className="scoreDisplay">
+              Your Score: 135
+            </div>
+            <div className="scoreComment">
+              Great Job!
+            </div>
           </div>
         </div>
       </div>
